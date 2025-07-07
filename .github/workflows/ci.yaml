@@ -70,7 +70,7 @@ jobs:
 
         - name: Docker Push
           uses: docker/build-push-action@v6
-          with:
+          with: 
             context: src/product-catalog
             file: src/product-catalog/Dockerfile
             push: true
@@ -94,8 +94,8 @@ jobs:
         
         - name: Commit and push changes
           run: |
-            git config --global user.email "abhishek@gmail.com"
-            git config --global user.name "Abhishek Veeramalla"
+            git config --global user.email "nazrultech@gmail.com"
+            git config --global user.name "Nazrul Choudhury"
             git add kubernetes/productcatalog/deploy.yaml
             git commit -m "[CI]: Update product catalog image tag"
             git push origin HEAD:main -f
